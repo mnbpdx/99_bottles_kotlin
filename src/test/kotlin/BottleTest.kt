@@ -29,23 +29,21 @@ private class BottleTest {
     @Test
     fun `GIVEN the the *first* verse WHEN it is read THEN it will match an expected string`() {
         val expectedVerse = "99 bottles of beer on the wall, " +
-                "99 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "98 bottles of beer on the wall.\n"
+            "99 bottles of beer.\n" +
+            "Take one down and pass it around, " +
+            "98 bottles of beer on the wall.\n"
 
         val actualVerse = bottle.verse(99)
 
         assertEquals(expectedVerse, actualVerse)
     }
 
-
     @Test
     fun `GIVEN the *4th to last* verse WHEN it is read THEN it will match an expected string`() {
         val expectedVerse = "3 bottles of beer on the wall, " +
-                "3 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "2 bottles of beer on the wall.\n";
-
+            "3 bottles of beer.\n" +
+            "Take one down and pass it around, " +
+            "2 bottles of beer on the wall.\n"
 
         val actualVerse = bottle.verse(3)
 
@@ -56,9 +54,9 @@ private class BottleTest {
     @Test
     fun `GIVEN the *3rd to last* verse WHEN it is read THEN it will match an expected string`() {
         val expectedVerse = "2 bottles of beer on the wall, " +
-                "2 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "1 bottle of beer on the wall.\n";
+            "2 bottles of beer.\n" +
+            "Take one down and pass it around, " +
+            "1 bottle of beer on the wall.\n"
 
         val actualVerse = bottle.verse(2)
 
@@ -69,9 +67,9 @@ private class BottleTest {
     @Test
     fun `GIVEN the *2nd to last* verse WHEN it is read THEN it will match an expected string`() {
         val expectedVerse = "1 bottle of beer on the wall, " +
-                "1 bottle of beer.\n" +
-                "Take it down and pass it around, " +
-                "no more bottles of beer on the wall.\n"
+            "1 bottle of beer.\n" +
+            "Take it down and pass it around, " +
+            "no more bottles of beer on the wall.\n"
 
         val actualVerse = bottle.verse(1)
 
@@ -82,9 +80,9 @@ private class BottleTest {
     @Test
     fun `GIVEN the *last* verse WHEN it is read THEN it will match an expected string`() {
         val expectedVerse = "No more bottles of beer on the wall, " +
-                "no more bottles of beer.\n" +
-                "Go to the store and buy some more, " +
-                "99 bottles of beer on the wall.\n"
+            "no more bottles of beer.\n" +
+            "Go to the store and buy some more, " +
+            "99 bottles of beer on the wall.\n"
 
         val actualVerse = bottle.verse(0)
 
@@ -95,14 +93,14 @@ private class BottleTest {
     @Test
     fun `GIVEN a couple verses WHEN they are read THEN they will match an expected string`() {
         val expectedVerses = "99 bottles of beer on the wall, " +
-                "99 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "98 bottles of beer on the wall.\n" +
-                "\n" +
-                "98 bottles of beer on the wall, " +
-                "98 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "97 bottles of beer on the wall.\n"
+            "99 bottles of beer.\n" +
+            "Take one down and pass it around, " +
+            "98 bottles of beer on the wall.\n" +
+            "\n" +
+            "98 bottles of beer on the wall, " +
+            "98 bottles of beer.\n" +
+            "Take one down and pass it around, " +
+            "97 bottles of beer on the wall.\n"
 
         val actualVerses = bottle.verses(99, 98)
 
@@ -113,20 +111,19 @@ private class BottleTest {
     @Test
     fun `GIVEN a few verses WHEN they are read THEN they will match an expected string`() {
         val expectedVerses = "2 bottles of beer on the wall, " +
-                "2 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "1 bottle of beer on the wall.\n" +
-                "\n" +
-                "1 bottle of beer on the wall, " +
-                "1 bottle of beer.\n" +
-                "Take it down and pass it around, " +
-                "no more bottles of beer on the wall.\n" +
-                "\n" +
-                "No more bottles of beer on the wall, " +
-                "no more bottles of beer.\n" +
-                "Go to the store and buy some more, " +
-                "99 bottles of beer on the wall.\n";
-
+            "2 bottles of beer.\n" +
+            "Take one down and pass it around, " +
+            "1 bottle of beer on the wall.\n" +
+            "\n" +
+            "1 bottle of beer on the wall, " +
+            "1 bottle of beer.\n" +
+            "Take it down and pass it around, " +
+            "no more bottles of beer on the wall.\n" +
+            "\n" +
+            "No more bottles of beer on the wall, " +
+            "no more bottles of beer.\n" +
+            "Go to the store and buy some more, " +
+            "99 bottles of beer on the wall.\n"
 
         val actualVerses = bottle.verses(2, 0)
 
@@ -138,10 +135,8 @@ private class BottleTest {
     fun `GIVEN the whole song WHEN it is read THEN they will match an expected string`() {
         val expectedSong = text
 
-
         val actualSong = bottle.song()
 
         assertEquals(expectedSong, actualSong)
     }
-
 }
