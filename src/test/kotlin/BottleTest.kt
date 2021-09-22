@@ -50,7 +50,6 @@ private class BottleTest {
         assertEquals(expectedVerse, actualVerse)
     }
 
-    @Disabled
     @Test
     fun `GIVEN the *3rd to last* verse WHEN it is read THEN it will match an expected string`() {
         val expectedVerse = "2 bottles of beer on the wall, " +

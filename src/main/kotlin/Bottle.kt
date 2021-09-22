@@ -9,6 +9,10 @@ private interface BottleInterface {
 
 internal class Bottle : BottleInterface {
     override fun verse(bottleNumber: Int): String =
+        when {
+            bottleNumber > 2 -> regularVerse(bottleNumber)
+            bottleNumber
+        }
         "$bottleNumber bottles of beer on the wall, $bottleNumber bottles of beer.\n" +
                 "Take one down and pass it around, ${bottleNumber - 1} bottles of beer on the wall.\n"
 
